@@ -94,7 +94,7 @@ static int ambient_weather_decode(r_device *decoder, bitbuffer_t *bitbuffer, uns
         return DECODE_FAIL_SANITY;
     }
 
-    if (temperature < -40.0 || temperature > 140.0) {
+    if (temperature < -40.0 || temperature > 300.0) {
         decoder_logf_bitrow(decoder, 1, __func__, b, 48, "Temperature failed sanity check 0x%03x", temp_f);
         return DECODE_FAIL_SANITY;
     }
